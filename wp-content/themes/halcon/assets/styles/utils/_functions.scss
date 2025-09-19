@@ -1,0 +1,19 @@
+@function calculateRem($size, $important) {
+  @if (unitless($size)) {
+    $size: $size * 1px;
+  }
+  $remSize: $size / 12px;
+  @if $important == true {
+      @return #{$remSize}rem !important;  
+  } @else {
+      @return #{$remSize}rem;  
+  }
+}
+
+@function getMargin($size, $modifier:1) {
+  @return ($base-leading / $size) * $modifier;
+}
+
+@function getPadding($size, $modifier:1) {
+  @return ($base-leading / $size) * $modifier;
+}

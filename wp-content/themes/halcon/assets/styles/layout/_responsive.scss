@@ -1,0 +1,305 @@
+@media only screen and (orientation: landscape){
+  html {
+    // prevent font scaling in landscape while allowing user zoom
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) and (orientation: landscape){
+	html, body {
+		min-height: 768px;
+	}	
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) and (orientation: portrait){
+	html, body {
+		min-height: 1280px;
+	}	
+}
+
+@media only screen and (max-width: 1670px) {
+  .benefits__items {
+    grid-column-gap: 165px;
+    grid-template-columns: calc(33.333% - 110px) calc(33.333% - 110px) calc(33.333% - 110px);
+  }
+  .career-list {
+    margin: 0 -30px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .benefits__items {
+    grid-column-gap: 105px;
+    grid-template-columns: calc(33.333% - 70px) calc(33.333% - 70px) calc(33.333% - 70px);
+  }
+}
+
+@media only screen and (max-width: 1230px) {
+  .benefits__items {
+    grid-column-gap: 45px;
+    grid-template-columns: calc(33.333% - 30px) calc(33.333% - 30px) calc(33.333% - 30px);
+  }
+  .career-list {
+    grid-template-columns: 50% 50%;
+  }
+  .career-list-career:nth-child(3n - 1) {
+    border-left: 0;
+    border-right: 0;
+  }
+  .career-list-career:nth-child(odd) {
+    border-right: 2px solid #DFDFDF;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .careers {
+    margin: 0;
+  }
+  .careers__anchor {
+    left: 0;
+    position: absolute;
+    top: -55px;
+  }
+  .career-list-career {
+    min-height: 450px;
+  }
+  .careers-popup-form {  
+    .op-row {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .hero {
+    height: auto;
+    // subtract the ios bottom nav
+    min-height: calc(100vh - 75px);
+  }
+  .hero__headline-wrapper {
+    align-items: flex-end;
+    flex: 1 0 100%;
+    padding: 75px 0 35px;
+  }
+  .hero__headline {
+    @include fontSize(75);
+    @include lineHeight(75, 4);
+    text-align: left;
+  }
+  .hero__nav {
+    display: none;
+  }
+  .map-and-location__obj-fit-image-wrapper {
+    display: none;
+  }
+  .map-and-location__map {
+    margin: 50px -15px 0;
+    width: calc(100% + 30px);
+  }
+  .map-and-location__address {
+    margin: getMargin(20, 2) 0 0;
+  }
+  .map-and-location__info {
+    margin: getMargin(20) 0 0;
+  }
+  .testimonials {
+    margin: 0;
+  }
+  .who-is-halcon {
+    margin: 75px 0 0;
+    .op-row {
+      display: flex;
+      flex-direction: column;
+    }
+    .op-col-start-1 {
+      order: 2;
+    }
+    .op-col-start-7 {
+      order: 1;
+    }
+  }
+  .who-is-halcon__anchor {
+    left: 0;
+    position: absolute;
+    top: -105px;
+  }
+  .who-is-halcon__headline {
+    margin: 0;
+  }
+  .who-is-halcon__content {
+    margin: 100px 0 0;
+  }
+  .who-is-halcon__images {
+    margin: 60px -15px 0;
+    width: calc(100% + 30px);
+  }
+  .why-work__headline {
+    margin: 95px 0 0;
+  }
+  .why-work__items {
+    display: block;
+    margin: 90px 0 0;
+  }
+  .why-work__item + .why-work__item {
+    margin-top: 30px;
+  }
+  .why-work__button {
+    margin: 50px 0 30px;
+  }
+  .why-work__images {
+    margin: 0 -15px;
+    width: calc(100% + 30px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .benefits__headline-wrapper {
+    padding: 30px 0;
+  }
+  .benefits__items {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    margin: 50px 0 0;
+  }
+  .benefits__image {
+    margin: 0 0 15px;
+  }
+  .benefits__button {
+    margin: 50px 0 0;
+  }
+  .careers__headline-wrapper {
+    padding: 30px 0;
+  }
+  .career-list {
+    grid-template-columns: 100%;
+  }
+  .career-list-career,
+  .career-list-career--visible {
+    max-height: 1000px;
+    min-height: 335px;
+  }
+  .career-list-career--hidden {
+    max-height: 0;
+    min-height: 0;
+  }
+  .career-list-career:not(.career-list-career--visible):nth-child(n+5) {
+    max-height: 0;
+    min-height: 0;
+  }
+  .career-list-career:nth-child(3n - 1),
+  .career-list-career:nth-child(odd) {
+    border-left: 0;
+    border-right: 0;
+  }
+  .career-list-career__content {
+    padding: 30px 30px 0;
+  }
+  .career-list-career__category {
+    padding: 0;
+  }
+  .career-list-career__title {
+    padding: 0 40px 0 0;
+  }
+  .career-list-career__text {
+    padding: 0;
+  }
+  .career-list__button {
+    display: flex;
+  }
+  .careers-popup-form__close {
+    top: 45px !important;
+  }
+  .careers-popup-form__button {
+    margin: 25px 0;
+  }
+  .careers-popup-form__radio {
+    flex-wrap: wrap;
+    margin: 25px 0 0;
+  
+    .gfield_label {
+      flex: 0 0 100%;
+    }
+  
+  }
+  .careers-popup-form__file-upload {
+    margin: 50px 0 0;
+  }
+  .map-and-location__map {
+    padding-bottom: 103%;
+  }
+  .ribbon {
+    flex-wrap: wrap;
+  }
+  .slideshow__images {
+    margin: 75px 0 0 0;
+    width: 100%;
+    
+    .swiper-wrapper {
+      padding: 00;
+    }
+    .swiper-slide:nth-child(odd) {
+      margin-top: 0;
+    }
+  }  
+  .slideshow {
+    padding: 100px 0;
+  }
+  .slideshow__obj-fit-image-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 111%;
+    width: 100%;
+  }
+  .testimonials {
+    padding: 100px 0;
+  }
+  .testimonials__headline {
+    text-align: left;
+  }
+  .testimonials__items {
+    margin: 0 0 70px;
+  }
+  .testimonials__quote {
+    @include fontSize(18);
+    @include lineHeight(18, 1.25);
+    text-align: left;
+  }
+  .testimonials__cite {
+    @include fontSize(14);
+    @include lineHeight(14);
+    margin: 15px 0 0;
+    text-align: left;
+  }
+  .testimonials__job-title {
+    @include fontSize(12);
+    @include lineHeight(12);
+  }
+  .testimonials-pagination {
+    margin: 60px 0 0;
+    text-align: left;
+  }
+  .testimonial__images {
+    margin: 75px 0 0 0;
+    width: 100%;
+    
+    .swiper-wrapper {
+      padding: 0;
+    }
+    
+    .swiper-slide-active {
+      margin-top: 0;
+    }
+  }  
+  .testimonial__obj-fit-image-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 111%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .benefits__items {
+    grid-column-gap: 0;
+    grid-template-columns: 100%;
+  }
+}

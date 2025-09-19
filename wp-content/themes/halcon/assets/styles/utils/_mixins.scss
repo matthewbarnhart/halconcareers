@@ -1,0 +1,7 @@
+@mixin fontSize($size, $important:false) {
+  font-size: calculateRem($size, $important);
+}
+
+@mixin lineHeight($size, $modifier:1) {
+  line-height: ($base-leading / $size) * $modifier;
+}

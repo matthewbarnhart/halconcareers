@@ -1,0 +1,91 @@
+/* Global =================================================== */
+
+@font-face {
+	font-family: "GakSans";
+	src:
+		url('assets/fonts/Gaksans-Regular.woff2') format('woff2'),
+		url('assets/fonts/Gaksans-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: "GakSansBold";
+	src:
+		url('assets/fonts/Gaksans-Bold.woff2') format('woff2'),
+		url('assets/fonts/Gaksans-Bold.woff') format('woff');
+}
+
+* { 
+  -webkit-tap-highlight-color:transparent;
+  box-sizing: border-box; 
+}
+
+a[href^=tel] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+
+html, body, h1, h2, h3, h4, h5, h6, img, p, blockquote, a, dl, dt, dd, ol, ul, li, fieldset, figure, figcaption, form, label, legend, table, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+  border: 0;
+  margin: 0;
+  outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+  font-size: 12px;
+  height: 100%;
+}
+
+body {
+  font-family: "GakSans", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  position: relative;
+}
+
+html.no-scroll,
+body.no-scroll {
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+      scroll-behavior: auto;
+  }
+}
+
+.disable-smooth-scrolling {
+    scroll-behavior: auto;
+}
+
+/* Main =================================================== */
+
+.main {
+  display: block; // for ie 11
+  margin: 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Google Map =================================================== */
+
+.gm-style-iw {
+  max-width: 280px; 
+	
+	a {
+		color: $orange;
+	}
+}

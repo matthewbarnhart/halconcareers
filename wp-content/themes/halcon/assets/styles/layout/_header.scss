@@ -1,0 +1,230 @@
+/* Header =================================================== */
+
+.header {
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: all .5s $ease-out-circ;
+  width: 100%;
+  z-index: map-get($zindex, header);
+  
+  .op-row {
+    // make sure this row doesn't block the nav links
+    pointer-events: none;
+  }
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.header--sticky {
+  background: #fff;
+  
+  .header-inner {
+    padding: 21px 0;
+  }
+  
+  .header-logo__image {
+    filter: invert(0);
+  }
+  
+  .hamburger-inner,
+  .hamburger-inner::after {
+    background-color: #000;
+  }
+}
+
+.hamburger-inner--nav-is-active,
+.hamburger-inner--nav-is-active::after {
+  background-color: #000 !important;
+}
+
+.header-logo {
+  pointer-events: auto;
+}
+
+.header-logo__image {
+  @extend %transition;
+  filter: invert(100%);
+}
+
+.header-logo__image--nav-is-active {
+  filter: invert(0);
+}
+
+.header__nav-trigger {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 11px;
+  justify-content: flex-end;
+  padding: 0;
+  pointer-events: auto;
+  transition: all .5s $ease-out-circ;
+  width: 100%;
+  z-index: map-get($zindex, header);
+}
+
+.header__nav-trigger:hover {
+	.hamburger-inner {
+	  width: 25px !important;
+	}
+	.hamburger-inner::after {
+	  width: $hamburger-layer-width !important;
+	}
+}
+
+.hamburger-inner::before {
+  display: none !important;
+}
+
+.hamburger-inner {
+  right: 0;
+	transition: all .2s ease-in-out !important;
+}
+
+.hamburger-inner::after {
+  right: 0;
+  transition: all .2s ease-in-out !important;
+  width: 25px !important;
+}
+
+.hamburger.is-active {
+  .hamburger-inner,
+  .hamburger-inner::after {
+    width: $hamburger-layer-width !important;
+  }
+}
+
+@media only screen and (max-width: 1670px) {
+  .header__nav-trigger--visible-nav {
+    padding-right: 445px !important;
+  }
+}
+
+/* Primary Nav =================================================== */
+  
+.primary-nav {
+  background: #fff;
+  height: 100vh;
+  overflow: auto;
+  padding: 50px 55px;
+  position: absolute;
+  right: -450px;
+  top: 0;
+  transition: all .5s $ease-out-circ;
+  width: 450px;
+  z-index: -1;
+}
+
+.primary-nav--visible {
+  right: 0;
+}
+
+.primary-menu__item {
+  @include fontSize(33);
+  @include lineHeight(33, 1.5);
+  color: $gray;
+  font-weight: 400;
+  list-style: none;
+}
+
+.primary-menu__item + .primary-menu__item {
+  margin-top: getMargin(33, 2);
+}
+
+.primary-menu__link {
+  color: inherit;
+  text-decoration: none;
+  z-index: mapget($zindex, page);
+}
+
+.primary-nav__address,
+.primary-nav__phone,
+.primary-nav__email,
+.primary-nav__hours {
+  @include fontSize(16);
+  @include lineHeight(16);
+  color: $gray;
+  letter-spacing: 1px;
+}
+
+.primary-nav__address {
+  margin-top: getMargin(16, 4);
+}
+
+.primary-nav__phone {
+  margin-top: getMargin(16);
+}
+
+.primary-nav__hours {
+  margin-top: getMargin(16);
+}
+
+.primary-nav__link {
+  color: $orange;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 990px) {	
+  
+  .header__nav-trigger,
+  .header__nav-trigger--visible-nav {
+    padding-right: 0 !important;
+  }
+  
+  .primary-menu__item {
+    @include fontSize(26);
+    @include lineHeight(26, 1.5);
+  }
+
+  .primary-menu__item + .primary-menu__item {
+    margin-top: getMargin(26);
+  }
+  
+  .primary-nav__address {
+    margin-top: getMargin(16, 2);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .primary-nav {
+    padding: 75px 0 100px;
+    right: 0;
+    width: 0;
+  }
+  .primary-nav--visible {
+    right: 0;
+  }
+  .primary-nav::before {
+    background: #fff;
+    content: '';
+    height: 65px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .primary-menu__item {
+    margin: 0 15px;
+  }
+  .primary-nav--visible {
+    width: 100%;
+  }
+  .primary-nav__address,
+  .primary-nav__phone,
+  .primary-nav__email,
+  .primary-nav__hours {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  
+
+}

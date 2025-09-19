@@ -1,0 +1,203 @@
+/* Calendar =================================================== */
+
+.ui-datepicker {
+  margin-top: -65px;
+}
+
+a.ui-datepicker-prev {
+  float: left;
+  width: 1em;
+  height: 1em;
+  margin-top: .2em;
+  span {
+    display: none;
+  }
+}
+
+a.ui-datepicker-prev:after {
+  color: $orange;
+  content: '\f104';
+  cursor: pointer;
+  font-family: FontAwesome;
+  margin: 0 0 0 5px;
+}
+
+a.ui-datepicker-next {
+  float: right;
+  width: 1em;
+  height: 1em;
+  margin-top: .2em;
+  span {
+    display: none;
+  }
+}
+
+a.ui-datepicker-next:after {
+  color: $orange;
+  content: '\f105';
+  cursor: pointer;
+  font-family: FontAwesome;
+  margin: 0 0 0 5px;
+}
+
+#ui-datepicker-div {
+  background: #fff;
+  padding: .5em;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+table.ui-datepicker-calendar th, 
+table.ui-datepicker-calendar td {
+  padding: .25em;
+  
+  a {
+    color: $orange;
+    text-decoration: none;
+  }
+}
+
+a.ui-datepicker-next.ui-corner-all {
+  float: right;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+}
+
+.ui-datepicker-title select {
+  padding: .5em 1em;
+  margin: 0 .15em;
+}
+
+td.ui-datepicker-week-end {
+  background: #fafafa;
+}
+
+table.ui-datepicker-calendar td {
+  padding: .25em;
+  text-align: center;
+}
+
+select[multiple] + .chosen-container li.result-selected {padding-left:.75em; background:black; color:white;}
+td.ui-datepicker-current-day a.ui-state-active {
+  display: block;
+  border-radius: 50%;
+  width: 1.5em;
+}
+
+input.datepicker_with_icon + img {
+  width: 1.5em;
+  position: relative;
+  left: .5em;
+  top: .25em;
+}
+
+/* Embedded Video =================================================== */
+
+.embedded-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Image Animation =================================================== */
+
+.image-sliding-animation {
+  bottom: 0;
+  height: 0;
+  left: auto;
+  transform: translate(0);
+  transition: all 1s cubic-bezier(.25, 1, .25, 1);
+}
+
+.image-sliding-animation--active {
+  height: 100%;
+}
+
+.image-sliding-animation::after {
+  background: $orange;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.image-sliding-animation--active::after {
+  animation: image-slide .35s ease .75s 1 forwards;
+}
+
+/* Galleries =================================================== */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: getMargin(22, 2) auto;
+  
+  // WP adds this here but we don't need it
+  br {
+    display: none;
+  }
+}
+
+.gallery + h1,
+.gallery + h2,
+.gallery + h3,
+.gallery + h4,
+.gallery + h5,
+.gallery + h6,
+.gallery + ol,
+.gallery + p,
+.gallery + ul, {
+  margin-top: getMargin(22);
+}
+
+.gallery-item {
+  margin: getMargin(22) 0;
+}
+
+/* Lightbox overrides =================================================== */
+
+.mfp-bg {
+  z-index: map-get($zindex, mfp-bg);
+}
+
+.mfp-content {
+  z-index: map-get($zindex, mfp-content);
+}
+
+.mfp-preloader {
+  z-index: map-get($zindex, mfp-preloader);
+}
+
+.mfp-wrap {
+  z-index: map-get($zindex, mfp-wrap);
+}
+
+button.mfp-close {
+  z-index: map-get($zindex, mfp-close);
+}
+
+.wf-loading {
+  h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote, a {
+    visibility: hidden;
+  }
+}
+
+.wf-active {
+  h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote, a {
+    visibility: visible;
+  }
+}

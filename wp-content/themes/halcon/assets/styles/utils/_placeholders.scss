@@ -1,0 +1,140 @@
+/* Placeholders =================================================== */
+
+%background-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%button {
+  @include fontSize(14);
+  @include lineHeight(14);
+  align-items: center;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-family: "GakSansBold", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+%button::before {
+  background: #000 url('assets/images/HF_CTA_Arrow_Btn.svg') center center no-repeat;
+  border-radius: 12px;
+  content: '';
+  display: inline-block;
+  height: 24px;
+  margin: 0 15px 0 0;
+  width: 24px;
+}
+
+%clearfix::after {
+  clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+%headline1 {
+  @include fontSize(75);
+  @include lineHeight(75, 2.8);
+  color: $dark-gray;
+  font-weight: 400;
+}
+
+%headline2 {
+  @include fontSize(45);
+  @include lineHeight(45, 2);
+  color: $dark-gray;
+  font-weight: 400;
+}
+
+%headline3 {
+  @include fontSize(26);
+  @include lineHeight(26, 1.5);
+  color: $dark-gray;
+  font-weight: 400;
+}
+
+%headline4 {
+  @include fontSize(20);
+  @include lineHeight(20);
+  color: $med-gray;
+  font-weight: 400;
+}
+
+%hide-text {
+  overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+%object-fit {
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: top center;
+  position: absolute;
+  width: 100%;
+}
+
+%text-style {
+  @include fontSize(16);
+  @include lineHeight(16);
+  color: $dark-gray;
+  font-weight: 400;
+}
+
+%text-style-large {
+  @include fontSize(18);
+  @include lineHeight(18, 1.25);
+}
+
+%text-style-small {
+  @include fontSize(14);
+  @include lineHeight(14);
+  color: $dark-gray;
+  font-weight: 400;
+}
+
+%transition {
+  transition: all .2s ease-in-out;
+}
+
+@media only screen and (max-width: 767px) {
+  %headline1,
+  %headline1-mobile {
+    @include fontSize(45);
+    @include lineHeight(45, 1.8);
+  }
+  %headline2,
+  %headline2-mobile {
+    @include fontSize(28);
+    @include lineHeight(28, 1.3);
+  }
+  %headline3,
+  %headline3-mobile {
+    @include fontSize(20);
+    @include lineHeight(20, 1.1);
+  }
+  %headline4,
+  %headline4-mobile {
+    @include fontSize(14);
+    @include lineHeight(14);
+  }
+  %text-style,
+  %text-style-mobile {
+    @include fontSize(12);
+    @include lineHeight(12);
+  }
+  %text-style-small,
+  %text-style-small-mobile {
+    @include fontSize(11);
+    @include lineHeight(11);
+  }
+}

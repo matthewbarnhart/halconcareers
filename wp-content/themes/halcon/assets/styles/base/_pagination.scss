@@ -1,0 +1,72 @@
+/* Pagination =================================================== */
+
+.wp-pagenavi {
+  margin: 100px auto 0;
+  text-align: center;
+  width: 100%;
+  .pages, .first, .last {
+    display: none;
+  }
+  .previouspostslink, 
+	.nextpostslink {
+		@extend %transition;
+	  @include fontSize(14);
+	  @include lineHeight(14);
+		color: $med-gray;
+    text-decoration: none;
+  }
+  .previouspostslink {
+    margin: 0 20px 0 0;
+  }
+	.nextpostslink {
+    margin: 0 0 0 20px;
+  }
+  .previouspostslink:hover, 
+	.nextpostslink:hover {
+		color: $orange;
+  }
+  .page {
+		@extend %transition;
+	  @include fontSize(14);
+	  @include lineHeight(14);
+	  border-bottom: 2px solid $med-gray;
+	  color: $med-gray;
+    margin: 0 20px;
+    text-decoration: none;
+  }
+  .page:hover {
+	  border-bottom: 2px solid $orange;
+	  color: $orange;
+  }
+  .current {
+	  @include fontSize(14);
+	  @include lineHeight(14);
+	  border-bottom: 2px solid $orange;
+	  color: $orange;
+    margin: 0 20px;
+    text-decoration: none;
+  }
+	.extend {
+	  @include fontSize(14);
+	  @include lineHeight(14);
+	  color: $med-gray;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.wp-pagenavi {
+	  margin: 45px auto 0;
+	  .previouspostslink {
+	    margin: 0 15px 0 0;
+	  }
+		.nextpostslink {
+	    margin: 0 0 0 15px;
+	  }
+	  .page {
+	    margin: 0 15px;
+	  }
+	  .current {
+	    margin: 0 15px;
+	  }
+	}
+}

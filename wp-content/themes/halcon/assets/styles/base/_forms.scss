@@ -1,0 +1,408 @@
+// override autocomplete styles in chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0 30px #fff inset !important
+}
+
+/* WP password protected form =================================================== */
+
+.post-password-form {
+	@extend %text-style;
+	padding: 60px 0;
+	text-align: center;
+	
+	label {
+		display: block;
+		margin: 15px 0 0;
+	}
+	
+	input[type=submit] {
+		@extend %button;
+		border: 0;
+		cursor: pointer;
+		margin: 30px 0 0;
+	}
+}
+
+/* Gravity Forms =================================================== */
+
+.gform_wrapper {
+  padding: 70px 0;
+  .hidden_label .gfield_label,
+  .hidden_sub_label {
+    display: none !important;
+  }
+  
+  .gsection_title {
+    @extend %headline3;
+    margin: 50px 0 0;
+  }
+  
+  .gform_fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .gfield {
+    list-style: none;
+    position: relative;
+    width: 100%;
+  }
+  
+  .gfield.gf_left_third {
+    flex: 0 0 27%;
+  }
+  
+  .gfield.gf_middle_third {
+    flex: 0 0 calc(27% + 90px);
+    padding: 0 45px;
+  }
+  
+  .gfield.gf_middle_third_wide {
+    flex: 0 0 46%;
+    padding: 0 45px;
+  }
+  
+  .gfield.gf_right_third {
+    flex: 0 0 27%;
+  }
+  
+  .gfield.gf_right_third_wide {
+    flex: 0 0 calc(46% - 90px);
+  }
+      
+  .ginput_container_name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .name_first,
+  .name_last {
+    flex: 0 0 calc(50% - 8px);
+    input {
+      width: 100%;
+    }
+  }
+  
+  .ginput_container_address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .ginput_full {
+      display: inline-block;
+      width: 100%;
+    }
+    
+    .ginput_full + .ginput_full,
+    .ginput_full + .ginput_left,
+    .ginput_full + .ginput_right,
+    .ginput_left + .ginput_full,
+    .ginput_left + .ginput_left,
+    .ginput_left + .ginput_right,
+    .ginput_right + .ginput_full,
+    .ginput_right + .ginput_left,
+    .ginput_right + .ginput_right {
+      margin-top: 15px;
+    }
+    
+    .ginput_left,
+    .ginput_right {
+      display: inline-block;
+      width: calc(50% - 8px);
+    }
+    
+    label {
+      display: inline-block;
+    }
+  }
+  
+  .gfield input:not([type=checkbox]):not([type=radio]):not([type=file]) {
+    @extend %text-style-large;
+    appearance: none;
+    background: transparent;
+    border: 2px solid #DFDFDF;
+    color: $dark-gray;
+		font-family: sans-serif;
+    height: 55px;
+    margin: 25px 0;
+    padding: 0 10px;
+    width: 100%;
+  }
+  
+  .ginput_container_fileupload {
+    margin: 30px 0 0 0;
+		input[type="file"] {
+	    @extend %text-style-small;
+      align-items: center;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+      display: flex;
+      font-weight: 400;
+      padding: 0 0 0 10px;
+      text-decoration: none;
+		}
+		input[type="file"]::-webkit-file-upload-button {
+      background: #000 url('assets/images/HF_CTA_Plus_Btn.svg') center center no-repeat;
+      background-size: 11px 11px;
+      border: 0;
+      border-radius: 12px;
+      content: '';
+      cursor: pointer;
+      display: inline-block;
+      height: 24px;
+      margin: 0 15px 0 -10px;
+      overflow: hidden;
+    	text-indent: 100%;
+    	white-space: nowrap;
+      width: 24px;
+		}
+  }
+    
+  .gfield_error input:not([type=checkbox]):not([type=radio]):not([type=file]) {
+    border: 1px solid $orange !important;
+  }
+  
+  .gfield input.datepicker {
+    width: 50%;
+  }
+  
+  .gfield input::placeholder,
+  .gfield textarea::placeholder {
+    color: rgba($dark-gray, .5);
+  }
+  
+  .gfield textarea {
+    @extend %headline4;
+    appearance: none;
+    background: transparent;
+		border: 0;
+    border-bottom: 2px solid #EADEDE;
+    color: $dark-gray;
+    font-family: sans-serif;
+    height: 110px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .gfield_error textarea {
+    border: 1px solid $orange;
+  }
+  
+  .gfield select {
+    //@extend %text-style-x-small;
+    background: #fafafa;
+    border: 1px solid #d2d2d2;
+    // color: $gray;
+    display: block;
+    font-family: sans-serif;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .gfield_checkbox,
+  .gfield_radio {
+    align-items: center;
+    margin: 0 0 0 25px;
+    display: flex;
+    li {
+      align-items: center;
+      display: flex;
+      line-height: 1;
+      list-style: none;
+      padding: 0;
+    }
+    label {
+      @extend %text-style-large;
+      color: #A1A1A1;
+      margin: 0 25px 0 0;
+      text-transform: lowercase;
+    }
+    input {
+      margin: 0 !important;
+    }
+    input[type=radio] + label {
+      margin-left: 10px;
+    }
+  }
+  
+  .gfield_description {
+    // @extend %fine-print;
+    // color: $light-gray;
+  }
+  
+  .gform_button {
+    @extend %button;
+    background: $orange;
+    border: 0;
+    border-radius: 28px;
+    color: #fff;
+    height: 55px;
+    margin: 0;
+    padding: 0 50px;
+    position: relative;
+  }
+
+  .gform_button::before {
+    background: #fff url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center left no-repeat;
+    transform: rotate(270deg);
+  }
+	
+  .gform_ajax_spinner {
+    display: none;
+  }
+  
+  .validation_error {
+    @extend %text-style-small;
+    color: $orange;
+    margin: 0 0 getMargin(15) / 2;
+  }
+  
+  .validation_message {
+    @extend %text-style-small;
+    color: $orange;
+    margin: 0;
+  }
+	
+	.gform_footer {
+		display: flex;
+		justify-content: flex-start;
+    margin: 150px 0 0;
+	}
+  
+  .gfield_visibility_hidden {
+    height: 0;
+    overflow: hidden;
+  }
+
+}
+
+.gform_confirmation_wrapper {
+  margin: 45px 0 0;
+}
+
+.gform_confirmation_wrapper.connect__form {
+  min-height: 400px;
+}
+
+.gform_confirmation_message {
+  @extend %text-style;
+}
+
+.gform_validation_container {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .gform_wrapper {
+    padding: 35px 0;
+    .gsection_title {
+      margin: 25px 0;
+    }
+    
+    .gfield.gf_left_third {
+      flex: 0 0 100%;
+    }
+  
+    .gfield.gf_middle_third {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  
+    .gfield.gf_middle_third_wide {
+      flex: 0 0 100%;
+      padding: 0;
+    }
+  
+    .gfield.gf_right_third {
+      flex: 0 0 100%;
+    }
+  
+    .gfield.gf_right_third_wide {
+      flex: 0 0 100%;
+    }
+    
+    .gfield input:not([type=checkbox]):not([type=radio]):not([type=file]) {
+      margin: 0 0 25px;
+    }
+    
+    .gfield_checkbox,
+    .gfield_radio {
+      margin: 0;
+
+      label {
+        color: #A1A1A1;
+        margin: 0 25px 0 0;
+        text-transform: lowercase;
+      }
+      input {
+        margin: 0 !important;
+      }
+      input[type=radio] + label {
+        margin-left: 10px;
+      }
+    }
+    .validation_message {
+      margin: 0 0 25px;
+    }
+  	.gform_footer {
+      margin: 50px 0 0;
+  	}
+  }
+}
+
+/* Prevent iphone from zooming into form fields =================================================== */
+
+// iPhone < 5: 
+@media screen and (device-aspect-ratio: 2/3) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"] { 
+    font-size: 16px !important; 
+  }
+}
+
+// iPhone 5, 5C, 5S, iPod Touch 5g 
+@media screen and (device-aspect-ratio: 40/71) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"] { 
+    font-size: 16px !important; 
+  }
+}
+
+// iPhone 6, iPhone 6s, iPhone 7 portrait/landscape
+@media screen and (device-aspect-ratio: 375/667) {
+  select, select:focus, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"] { 
+    font-size: 16px !important; 
+  }
+}
+
+// iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus portrait/landscape
+@media screen and (device-aspect-ratio: 9/16) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"] {
+     font-size: 16px !important; 
+   }
+}

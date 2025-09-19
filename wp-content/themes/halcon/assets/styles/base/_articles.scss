@@ -1,0 +1,194 @@
+/* Articles =================================================== */
+
+.op-article,
+.op-content-block {  
+  
+  // give all adjacent elements a default top margin
+  * + * {
+    margin-top: getMargin(18);
+  }
+  
+	a {
+		color: $orange;
+	}
+	
+  h1 {
+    @extend %headline1;
+  }
+  
+  h2 {
+    @extend %headline2;
+  }
+    
+  h2 + h2 {
+    margin-top: getMargin(35);
+  }
+  
+  h2 + h3 {
+    margin-top: getMargin(28);
+  }
+    
+  h3 {
+    @extend %headline3;
+  }
+    
+  h4 {
+    @extend %headline4;
+  }
+  
+  h1 + p,
+  h1 + ul,
+  h1 + ol {
+    margin-top: getMargin(16, .25);
+  }
+  
+  h2 + p,
+  h2 + ul,
+  h2 + ol,
+  h3 + p,
+  h3 + ul,
+  h3 + ol,
+  h5 + p,
+  h5 + ul,
+  h5 + ol  {
+    margin-top: getMargin(16);
+  }
+  
+  h4 + p,
+  h4 + ul,
+  h4 + ol {
+    margin-top: getMargin(16, .5);
+  }
+    
+  p,
+  li {
+    @extend %text-style;
+  }
+  
+  li + li {
+    margin-top: 0;
+  }
+  
+  figure + h2,
+  .embedded-video + h2,
+  p + h2,
+  ul + h2,
+  ol + h2,
+  figure + h3,
+  .embedded-video + h3,
+  p + h3,
+  ul + h3,
+  ol + h3,
+  figure + h4,
+  .embedded-video + h4,
+  p + h4,
+  ul + h4,
+  ol + h4,
+  figure + h5,
+  .embedded-video + h5,
+  p + h5,
+  ul + h5,
+  ol + h5 {
+    margin-top: getMargin(16) !important;
+  }
+    
+/*  li + li,*/
+  figure + hr,
+  figure + p,
+  figure + ol,
+  figure + ul,
+  .embedded-video + hr,
+  .embedded-video + p,
+  .embedded-video + ol,
+  .embedded-video + ul,
+  p + hr,
+  p + p,
+  p + ol,
+  p + ul,
+  p + .embedded-video,
+  ul + ul,
+  ul + p,
+  ul + ol,
+  ul + .embedded-video,
+  ol + ol,
+  ol + p,
+  ol + ul,
+  ol + .embedded-video {
+    margin-top: getMargin(16);
+  }
+  
+  strong {
+    font-weight: 500;
+  }
+  
+  ul,
+  ol {
+    margin-left: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  p:first-child > img.aligncenter,
+  p:first-child > img.alignnone {
+    margin-top: 0;
+  }
+  
+  img.aligncenter,
+  img.alignnone {
+    margin: getMargin(16) 0 0;
+  }
+
+  img.alignleft{
+    float: left;
+    margin: getMargin(16) 35px 35px 0;
+  }
+
+  img.alignright{
+    float: right;
+    margin: getMargin(16) 0 35px 35px;
+  }
+  
+  figure {
+    max-width: 100%;
+  }
+  
+  figure:not(:first-of-type) {
+    margin-top: getMargin(16, 3);
+  }
+    
+  figcaption {
+    @include fontSize(16);
+    @include lineHeight(16);
+    //color: $dark-gray;
+    font-style: italic;
+    margin: getMargin(16, .5) 0 0;
+  }
+    
+  figure.alignleft {
+    @extend %clearfix;
+    float: left;
+    margin: getMargin(16, 2) 35px 15px 0;
+  }
+
+  figure.alignright {
+    @extend %clearfix;
+    float: right;
+    margin: getMargin(16, 2) 0 15px 35px;
+  }
+    
+  .embedded-video + hr,
+  .embedded-video + p,
+  .embedded-video + ol,
+  .embedded-video + ul,
+  {
+    margin-top: getMargin(16, 2);
+  }
+  
+  // this is named btn to avoid conflicts with gravity forms .button class
+  .btn {
+    @extend %button;
+  }
+}
