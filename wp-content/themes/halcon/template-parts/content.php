@@ -17,6 +17,12 @@ if( function_exists('have_rows') && have_rows('flexible_content_1') ):
         get_template_part( 'template-parts/content','benefits');
 
       endif;
+			
+      if( get_row_layout() == 'careers_hero' ):
+
+        get_template_part( 'template-parts/content','careers-hero');
+
+      endif;
     
       if( get_row_layout() == 'career_opportunities' ):
 

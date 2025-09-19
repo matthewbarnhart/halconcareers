@@ -7,6 +7,7 @@ add_theme_support( 'menus' );
 register_nav_menu( 'primary', 'Primary Menu' );
 register_nav_menu( 'hero', 'Hero Menu' );
 register_nav_menu( 'footer', 'Footer Menu' );
+register_nav_menu( 'careers', 'Careers Menu' );
 
 /**
  * Walker Texas Ranger

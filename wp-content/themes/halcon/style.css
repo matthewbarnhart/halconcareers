@@ -710,6 +710,9 @@ html {
   transform: rotate(180deg); }
 
 /* Careers Opportunities =================================================== */
+.hero + .careers {
+  margin-top: 0; }
+
 .careers {
   margin: 50px 0 0;
   position: relative; }
@@ -1020,7 +1023,7 @@ html {
 
 .hero-menu__item + .hero-menu__item::before {
   content: '|';
-  left: 0;
+  left: -8px;
   position: absolute;
   top: 0; }
 
