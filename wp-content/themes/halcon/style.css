@@ -26,34 +26,36 @@ Author URI: thisismalley.com
     height: 0; } }
 
 /* Placeholders =================================================== */
-.career-list-career__obj-fit-image-wrapper, .hero__obj-fit-image-wrapper, .map-and-location__obj-fit-image-wrapper, .slideshow__obj-fit-image-wrapper, .testimonial__obj-fit-image-wrapper, .who-is-halcon__obj-fit-image-wrapper, .why-work__obj-fit-image-wrapper {
+.career-list-career__obj-fit-image-wrapper, .hero__obj-fit-image-wrapper, .map-and-location__obj-fit-image-wrapper, .slideshow__obj-fit-image-wrapper, .testimonial__obj-fit-image-wrapper, .two-column-with-image__obj-fit-image-wrapper {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
 
 .op-article .btn,
-.op-content-block .btn, .benefits__button, .career-list__button, .careers-popup-form__button, .ribbon__button, .why-work__button, .post-password-form input[type=submit], .gform_wrapper .gform_button {
+.op-content-block .btn, .benefits__button, .career-list__button, .careers-popup-form__close, .careers-popup-form__button, .ribbon__button, .two-column-with-image__button, .two-column-with-video__button, .post-password-form input[type=submit], .gform_wrapper .gform_button {
   font-size: 1.16667rem;
   line-height: 1.71429em;
   align-items: center;
   color: #000;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-family: "GakSansBold", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+  min-height: 25px;
   text-decoration: none;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  transition: all .2s ease-in-out; }
 
 .op-article .btn::before,
-.op-content-block .btn::before, .benefits__button::before, .career-list__button::before, .careers-popup-form__button::before, .ribbon__button::before, .why-work__button::before, .post-password-form input[type=submit]::before, .gform_wrapper .gform_button::before {
-  background: #000 url("assets/images/HF_CTA_Arrow_Btn.svg") center center no-repeat;
-  border-radius: 12px;
+.op-content-block .btn::before, .benefits__button::before, .career-list__button::before, .careers-popup-form__close::before, .careers-popup-form__button::before, .ribbon__button::before, .two-column-with-image__button::before, .two-column-with-video__button::before, .post-password-form input[type=submit]::before, .gform_wrapper .gform_button::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Black.svg") center center no-repeat;
   content: '';
   display: inline-block;
-  height: 24px;
+  height: 25px;
   margin: 0 15px 0 0;
-  width: 24px; }
+  transition: all .2s ease-in-out;
+  width: 25px; }
 
 .op-article figure.alignleft::after,
 .op-content-block figure.alignleft::after, .op-article figure.alignright::after,
@@ -72,7 +74,7 @@ Author URI: thisismalley.com
   font-weight: 400; }
 
 .op-article h2,
-.op-content-block h2, .benefits__headline, .careers__headline, .careers-popup-form__job-title, .map-and-location__headline, .testimonials__headline, .who-is-halcon__headline, .why-work__headline {
+.op-content-block h2, .benefits__headline, .careers__headline, .careers-popup-form__job-title, .map-and-location__headline, .testimonials__headline, .two-column-with-image__headline, .two-column-with-video__headline {
   font-size: 3.75rem;
   line-height: 1.06667em;
   color: #3D3D3C;
@@ -86,13 +88,13 @@ Author URI: thisismalley.com
   font-weight: 400; }
 
 .op-article h4,
-.op-content-block h4, .benefits__title, .career-list-career__category, .map-and-location__text, .why-work__subhead, .gform_wrapper .gfield textarea {
+.op-content-block h4, .benefits__title, .career-list-career__category, .map-and-location__text, .two-column-with-image__subhead, .two-column-with-video__subhead, .gform_wrapper .gfield textarea {
   font-size: 1.66667rem;
   line-height: 1.2em;
   color: #8C8C8C;
   font-weight: 400; }
 
-.career-list-career__obj-fit-image, .hero__obj-fit-image, .map-and-location__obj-fit-image, .slideshow__obj-fit-image, .testimonial__obj-fit-image, .who-is-halcon__obj-fit-image, .why-work__obj-fit-image {
+.career-list-career__obj-fit-image, .hero__obj-fit-image, .map-and-location__obj-fit-image, .slideshow__obj-fit-image, .testimonial__obj-fit-image, .two-column-with-image__obj-fit-image {
   bottom: 0;
   display: block;
   height: 100%;
@@ -107,7 +109,7 @@ Author URI: thisismalley.com
 .op-article p,
 .op-article li,
 .op-content-block p,
-.op-content-block li, .benefits__text, .career-list-career__para, .why-work__text, .post-password-form, .gform_confirmation_message {
+.op-content-block li, .header__languages, .benefits__text, .career-list-career__para, .two-column-with-image__text, .two-column-with-video__text, .post-password-form, .gform_confirmation_message {
   font-size: 1.33333rem;
   line-height: 1.5em;
   color: #3D3D3C;
@@ -124,7 +126,7 @@ Author URI: thisismalley.com
   color: #3D3D3C;
   font-weight: 400; }
 
-.header-logo__image, .social-media__item, .social-media__link, .social-media__link::before, .career-list-career__title::before, .career-list-career__link, .careers-popup-form__past-employment, .ribbon-wrapper, .testimonials-pagination__bullet, .testimonial__images .swiper-slide, .wp-pagenavi .previouspostslink,
+.header-logo__image, .header__language-link, .primary-menu__link, .primary-nav__link, .footer-menu__link, .social-media__item, .social-media__link, .social-media__link::before, .footer__back-to-top, .career-list-career__title::before, .career-list-career__link, .careers-popup-form__close::after, .careers-popup-form__past-employment, .hero-menu__link, .map-and-location__link, .ribbon-wrapper, .testimonials-pagination__bullet, .testimonial__images .swiper-slide, .wp-pagenavi .previouspostslink,
 .wp-pagenavi .nextpostslink, .wp-pagenavi .page {
   transition: all .2s ease-in-out; }
 
@@ -134,7 +136,7 @@ Author URI: thisismalley.com
     font-size: 3.75rem;
     line-height: 0.96em; }
   .op-article h2,
-  .op-content-block h2, .benefits__headline, .careers__headline, .careers-popup-form__job-title, .map-and-location__headline, .testimonials__headline, .who-is-halcon__headline, .why-work__headline {
+  .op-content-block h2, .benefits__headline, .careers__headline, .careers-popup-form__job-title, .map-and-location__headline, .testimonials__headline, .two-column-with-image__headline, .two-column-with-video__headline {
     font-size: 2.33333rem;
     line-height: 1.11429em; }
   .op-article h3,
@@ -142,13 +144,13 @@ Author URI: thisismalley.com
     font-size: 1.66667rem;
     line-height: 1.32em; }
   .op-article h4,
-  .op-content-block h4, .benefits__title, .career-list-career__category, .map-and-location__text, .why-work__subhead, .gform_wrapper .gfield textarea {
+  .op-content-block h4, .benefits__title, .career-list-career__category, .map-and-location__text, .two-column-with-image__subhead, .two-column-with-video__subhead, .gform_wrapper .gfield textarea {
     font-size: 1.16667rem;
     line-height: 1.71429em; }
   .op-article p,
   .op-article li,
   .op-content-block p,
-  .op-content-block li, .benefits__text, .career-list-career__para, .why-work__text, .post-password-form, .gform_confirmation_message {
+  .op-content-block li, .header__languages, .benefits__text, .career-list-career__para, .two-column-with-image__text, .two-column-with-video__text, .post-password-form, .gform_confirmation_message {
     font-size: 1rem;
     line-height: 2em; }
   .footer__copyright, .footer-menu__item, .career-list-career__link, .gform_wrapper .ginput_container_fileupload input[type="file"], .gform_wrapper .validation_error, .gform_wrapper .validation_message {
@@ -222,6 +224,9 @@ html {
   max-width: 280px; }
   .gm-style-iw a {
     color: #FF5919; }
+
+.swiper-container-free-mode > .swiper-wrapper {
+  transition-timing-function: linear; }
 
 /* Articles =================================================== */
 .op-article,
@@ -458,16 +463,44 @@ html {
 .header-logo__image--nav-is-active {
   filter: invert(0); }
 
+.header__languages {
+  color: #fff;
+  display: flex;
+  flex: 1 0 auto;
+  font-weight: 300;
+  justify-content: flex-end;
+  line-height: 1;
+  margin: 0 35px 0 0;
+  pointer-events: auto; }
+
+.header__languages--hidden {
+  opacity: 0;
+  pointer-events: none; }
+
+.header__language-link {
+  color: inherit;
+  text-decoration: none; }
+
+.header__language-link:hover {
+  color: #FF5919; }
+
+.header__language-link {
+  color: inherit;
+  text-decoration: none; }
+
+.header__language-link + .header__language-link {
+  margin-left: 15px; }
+
 .header__nav-trigger {
   align-items: center;
   cursor: pointer;
-  display: flex;
+  display: flex !important;
+  flex: 0 0 auto;
   height: 11px;
   justify-content: flex-end;
   padding: 0;
   pointer-events: auto;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  width: 100%;
   z-index: 6200; }
 
 .header__nav-trigger:hover .hamburger-inner {
@@ -498,19 +531,19 @@ html {
 
 /* Primary Nav =================================================== */
 .primary-nav {
-  background: #fff;
+  background: #f3f3f3;
   height: 100vh;
   overflow: auto;
   padding: 50px 55px;
   position: absolute;
-  right: -450px;
+  right: -467px;
   top: 0;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  width: 450px;
+  width: 467px;
   z-index: -1; }
 
 .primary-nav--visible {
-  right: 0; }
+  right: -17px; }
 
 .primary-menu__item {
   font-size: 2.75rem;
@@ -526,6 +559,9 @@ html {
   color: inherit;
   text-decoration: none;
   z-index: mapget((mfp-close: 9005, mfp-content: 9004, mfp-preloader: 9003, mfp-wrap: 9002, mfp-bg: 9001, modal: 9000, overlay: 6320, header-nav-is-open: 6300, header: 6200, dropdown: 6100, nav: 6100, page-overlay: 5010, page: 5000, background-pattern: 3000), page); }
+
+.primary-menu__link:hover {
+  color: #FF5919; }
 
 .primary-nav__address,
 .primary-nav__phone,
@@ -549,7 +585,14 @@ html {
   color: #FF5919;
   text-decoration: none; }
 
+.primary-nav__link:hover {
+  color: #000; }
+
 @media only screen and (max-width: 990px) {
+  .header__languages {
+    left: 0;
+    position: absolute;
+    bottom: -5px; }
   .header__nav-trigger,
   .header__nav-trigger--visible-nav {
     padding-right: 0 !important; }
@@ -562,6 +605,9 @@ html {
     margin-top: 3em; } }
 
 @media only screen and (max-width: 767px) {
+  .header__languages {
+    font-size: 1.33333rem;
+    line-height: 1.5em; }
   .primary-nav {
     padding: 75px 0 100px;
     right: 0;
@@ -608,6 +654,9 @@ html {
   color: inherit;
   text-decoration: none; }
 
+.footer-menu__link:hover {
+  color: #FF5919; }
+
 .footer__utility {
   display: flex;
   justify-content: flex-end; }
@@ -622,11 +671,15 @@ html {
   background: #000;
   border-radius: 12px;
   color: #fff;
+  cursor: pointer;
   display: flex;
   height: 24px;
   justify-content: center;
   list-style: none;
   width: 24px; }
+
+.social-media__item:hover {
+  background: #FF5919; }
 
 .social-media__item + .social-media__item {
   margin-left: 30px; }
@@ -637,13 +690,15 @@ html {
 
 /* Back to Top =================================================== */
 .footer__back-to-top {
-  background: #000 url("assets/images/HF_CTA_Arrow_Btn.svg") center center no-repeat;
-  border-radius: 12px;
+  background: url("assets/images/HF_CTA_Arrow_Btn_Black.svg") center center no-repeat;
   display: inline-block;
-  height: 24px;
+  height: 25px;
   margin: 0 0 0 30px;
   transform: rotate(180deg);
   width: 24px; }
+
+.footer__back-to-top:hover {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center center no-repeat; }
 
 @media only screen and (max-width: 990px) {
   .footer-menu {
@@ -709,6 +764,12 @@ html {
 .benefits__button::before {
   transform: rotate(180deg); }
 
+.benefits__button:hover {
+  color: #FF5919; }
+
+.benefits__button:hover::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center center no-repeat; }
+
 /* Careers Opportunities =================================================== */
 .hero + .careers {
   margin-top: 0; }
@@ -767,8 +828,8 @@ html {
 .career-list-career--hidden::after {
   max-height: 0; }
 
-.career-list-career:nth-child(3n - 1) {
-  border-left: 2px solid #DFDFDF;
+.career-list-career:nth-child(3n - 1),
+.career-list-career:nth-child(3n - 2) {
   border-right: 2px solid #DFDFDF; }
 
 .career-list-career:hover,
@@ -800,6 +861,9 @@ html {
   .career-list-career:hover .career-list-career__link,
   .career-list-career--over .career-list-career__link {
     color: #fff; }
+  .career-list-career:hover .career-list-career__link:hover,
+  .career-list-career--over .career-list-career__link:hover {
+    color: #FF5919; }
 
 .career-list-career__content {
   padding: 45px 30px 0;
@@ -873,59 +937,45 @@ html {
   width: 24px; }
 
 /* Careers Form =================================================== */
-.careers-popup-form .op-row {
-  align-items: center;
-  min-height: 100vh; }
+.careers-popup-form {
+  background: #f5f5f5;
+  margin: 0 0 0 -8px;
+  width: calc(100% + 16px) !important; }
+  .careers-popup-form .op-row {
+    align-items: center;
+    min-height: 100vh; }
 
 .careers-popup-form__job-title-field {
   height: 0;
   overflow: hidden; }
 
 .careers-popup-form__job-title {
-  padding: 0 50px 0 0; }
+  padding: 0 250px 0 0; }
 
 .careers-popup-form__close {
-  cursor: pointer;
-  display: inline-block;
-  height: 15px;
+  color: #fff;
+  margin: 15px 0 0;
   position: absolute;
   right: 0;
-  top: 85px !important;
-  width: 32px; }
+  top: 68px !important; }
 
-.careers-popup-form__close-inner {
-  display: block;
-  top: 50%;
-  margin-top: -0.5px;
-  transform: rotate(45deg); }
-  .careers-popup-form__close-inner, .careers-popup-form__close-inner::before, .careers-popup-form__close-inner::after {
-    width: 32px;
-    height: 1px;
-    background-color: #000;
-    border-radius: 0;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease; }
-  .careers-popup-form__close-inner::before, .careers-popup-form__close-inner::after {
-    content: "";
-    display: block; }
-  .careers-popup-form__close-inner::before {
-    top: 0;
-    opacity: 0; }
-  .careers-popup-form__close-inner::after {
-    bottom: 0;
-    transform: rotate(-90deg); }
+.careers-popup-form__close::after {
+  color: #FF5919;
+  content: 'Back to the opportunities';
+  text-transform: none; }
 
-.careers-popup-form__button {
-  margin: 40px 0 0; }
+.careers-popup-form__close::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center left no-repeat;
+  transform: rotate(270deg); }
 
-.careers-popup-form__button::before {
-  background: #000 url("assets/images/HF_CTA_Plus_Btn.svg") center center no-repeat;
-  background-size: 11px 11px;
-  border-radius: 12px;
-  height: 24px;
-  width: 24px; }
+.careers-popup-form__close:hover {
+  color: #000; }
+
+.careers-popup-form__close:hover::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Black.svg") center left no-repeat; }
+
+.careers-popup-form__close:hover::after {
+  color: #000; }
 
 .careers-popup-form__radio {
   display: flex;
@@ -951,12 +1001,26 @@ html {
   margin-top: 50px; }
 
 .careers-popup-form__button {
+  margin: 40px 0 0;
   max-height: 40px;
   transition: all .2s ease-in-out; }
 
 .careers-popup-form__button--hidden {
   max-height: 0;
   overflow: hidden; }
+
+.careers-popup-form__button::before {
+  background: #000 url("assets/images/HF_CTA_Plus_Btn.svg") center center no-repeat;
+  background-size: 11px 11px;
+  border-radius: 12px;
+  height: 24px;
+  width: 24px; }
+
+.careers-popup-form__button:hover {
+  color: #FF5919; }
+
+.careers-popup-form__button:hover::before {
+  background-color: #FF5919; }
 
 .careers-popup-form__past-employment {
   max-height: 0;
@@ -970,6 +1034,7 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100svh;
   position: relative;
   z-index: 5000; }
 
@@ -1017,19 +1082,29 @@ html {
   list-style: none; }
 
 .hero-menu__item + .hero-menu__item {
-  margin-left: 40px;
+  margin-left: 30px;
   padding-left: 40px;
   position: relative; }
 
 .hero-menu__item + .hero-menu__item::before {
   content: '|';
-  left: -8px;
+  left: -2px;
   position: absolute;
   top: 0; }
 
 .hero-menu__link {
   color: inherit;
   text-decoration: none; }
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-menu__link:hover {
+    color: #FF5919; } }
+
+@media (pointer: coarse) {
+  .hero-menu__link {
+    transition: none; }
+  .hero-menu__link:active {
+    color: #FF5919; } }
 
 /* Map & Location =================================================== */
 .map-and-location {
@@ -1040,6 +1115,11 @@ html {
   left: 0;
   position: absolute;
   top: -75px; }
+
+.map-and-location__headline {
+  align-items: center;
+  display: flex;
+  height: 100%; }
 
 .map-and-location__text {
   color: #3D3D3C; }
@@ -1053,6 +1133,9 @@ html {
 .map-and-location__link {
   color: #FF5919;
   text-decoration: none; }
+
+.map-and-location__link:hover {
+  color: #000; }
 
 .map-and-location__image-wrapper {
   height: 0;
@@ -1109,8 +1192,14 @@ html {
   margin: 15px 0 0; }
 
 .ribbon__button::before {
-  background: #fff url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center left no-repeat;
+  background: url("assets/images/HF_CTA_Arrow_Btn_White.svg") center left no-repeat;
   transform: rotate(270deg); }
+
+.ribbon__button:hover {
+  color: #000; }
+
+.ribbon__button:hover::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Black.svg") center left no-repeat; }
 
 /* Slideshow =================================================== */
 .slideshow {
@@ -1193,9 +1282,10 @@ html {
   background-color: #FF5919; }
 
 .testimonial__images {
+  left: 50%;
   position: relative;
-  margin: 0 0 0 -175px;
-  width: 1950px; }
+  transform: translateX(-50%);
+  width: 1990px; }
   .testimonial__images .swiper-wrapper {
     padding: 50px 0 0; }
   .testimonial__images .swiper-slide-active {
@@ -1206,53 +1296,21 @@ html {
   position: relative;
   width: 350px; }
 
-/* Who is HALCON =================================================== */
-.who-is-halcon {
-  margin: 100px 0 0;
-  position: relative; }
-
-.who-is-halcon__anchor {
-  left: 0;
-  position: absolute;
-  top: -55px; }
-
-.who-is-halcon__headline {
-  color: #3D3D3C;
-  margin: 100px 0 0; }
-
-.who-is-halcon__content {
-  margin: 180px 0 0; }
-
-.who-is-halcon__images {
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 133%;
-  position: relative;
-  width: 100%; }
-  .who-is-halcon__images .swiper-container {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-
-.who-is-halcon__obj-fit-image-wrapper {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 100%; }
-
-/* Why Work With Us =================================================== */
-.why-work {
+/* Two Column with Image =================================================== */
+.two-column-with-image {
   margin: 50px 0 0; }
 
-.why-work__headline {
+.two-column-with-image__headline {
   color: #3D3D3C;
   margin: 80px 0 0; }
 
-.why-work__items {
+.two-column-with-image__content {
+  margin: 180px 0 0; }
+
+.two-column-with-image__content + .two-column-with-image__items {
+  margin: 80px 0 0; }
+
+.two-column-with-image__items {
   display: -ms-grid;
   display: grid;
   grid-column-gap: 45px;
@@ -1263,39 +1321,95 @@ html {
   grid-template-rows: auto;
   margin: 175px 0 0; }
 
-.why-work__item {
+.two-column-with-image__item {
   grid-column: auto / auto; }
 
-.why-work__subhead {
+.two-column-with-image__subhead {
   color: #000; }
 
-.why-work__text {
+.two-column-with-image__text {
   color: #8C8C8C;
   margin: 0.75em 0 0; }
 
-.why-work__button {
+.two-column-with-image__button {
+  display: inline-flex;
   margin: 110px 0 60px; }
 
-.why-work__images {
+.two-column-with-image__button:hover {
+  color: #FF5919; }
+
+.two-column-with-image__button:hover::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center center no-repeat; }
+
+.two-column-with-image__images {
   height: 0;
   overflow: hidden;
-  padding-bottom: 133%;
+  padding-bottom: 106.66%;
   position: relative;
   width: 100%; }
-  .why-work__images .swiper-container {
+  .two-column-with-image__images .swiper-container {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%; }
 
-.why-work__obj-fit-image-wrapper {
+.two-column-with-image__obj-fit-image-wrapper {
   bottom: 0;
   height: 100%;
   left: 0;
   overflow: hidden;
   position: absolute;
   width: 100%; }
+
+/* Two Column with Video =================================================== */
+.two-column-with-video {
+  margin: 50px 0 0; }
+
+.two-column-with-video__headline {
+  color: #3D3D3C;
+  margin: 80px 0 0; }
+
+.two-column-with-video__content {
+  margin: 75px 0 0; }
+
+.two-column-with-video__content + .two-column-with-video__items {
+  margin: 75px 0 0; }
+
+.two-column-with-video__items {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 240px;
+  grid-row-gap: 60px;
+  -ms-grid-columns: (calc(33.333% - 160px))[3];
+  grid-template-columns: repeat(3, calc(33.333% - 160px));
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  margin: 75px 0 0; }
+
+.two-column-with-video__item {
+  grid-column: auto / auto; }
+
+.two-column-with-video__subhead {
+  color: #000; }
+
+.two-column-with-video__text {
+  color: #8C8C8C;
+  margin: 0.75em 0 0; }
+
+.two-column-with-video__button {
+  display: inline-flex;
+  margin: 110px 0 60px; }
+
+.two-column-with-video__button:hover {
+  color: #FF5919; }
+
+.two-column-with-video__button:hover::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center center no-repeat; }
+
+.two-column-with-video__video {
+  margin: 75px 0 0;
+  position: relative; }
 
 @media only screen and (orientation: landscape) {
   html {
@@ -1331,15 +1445,21 @@ html {
   .career-list {
     -ms-grid-columns: 50% 50%;
     grid-template-columns: 50% 50%; }
-  .career-list-career:nth-child(3n - 1) {
+  .career-list-career:nth-child(3n - 1),
+  .career-list-career:nth-child(3n - 2) {
     border-left: 0;
     border-right: 0; }
   .career-list-career:nth-child(odd) {
-    border-right: 2px solid #DFDFDF; } }
+    border-right: 2px solid #DFDFDF; }
+  .hero__obj-fit-image {
+    -o-object-position: 70% 0;
+    object-position: 70% 0; }
+  .two-column-with-video__items {
+    grid-column-gap: 45px;
+    -ms-grid-columns: (calc(33.333% - 30px))[3];
+    grid-template-columns: repeat(3, calc(33.333% - 30px)); } }
 
 @media only screen and (max-width: 990px) {
-  .careers {
-    margin: 0; }
   .careers__anchor {
     left: 0;
     position: absolute;
@@ -1350,8 +1470,7 @@ html {
     display: flex;
     justify-content: center; }
   .hero {
-    height: auto;
-    min-height: calc(100vh - 75px); }
+    height: auto; }
   .hero__headline-wrapper {
     align-items: flex-end;
     flex: 1 0 100%;
@@ -1362,7 +1481,7 @@ html {
     text-align: left; }
   .hero__nav {
     display: none; }
-  .map-and-location__obj-fit-image-wrapper {
+  .map-and-location__image-wrapper {
     display: none; }
   .map-and-location__map {
     margin: 50px -15px 0;
@@ -1373,38 +1492,45 @@ html {
     margin: 1.2em 0 0; }
   .testimonials {
     margin: 0; }
-  .who-is-halcon {
+  .two-column-with-image {
     margin: 75px 0 0; }
-    .who-is-halcon .op-row {
-      display: flex;
-      flex-direction: column; }
-    .who-is-halcon .op-col-start-1 {
-      order: 2; }
-    .who-is-halcon .op-col-start-7 {
-      order: 1; }
-  .who-is-halcon__anchor {
+  .two-column-with-image__anchor {
     left: 0;
     position: absolute;
     top: -105px; }
-  .who-is-halcon__headline {
+  .two-column-with-image__headline {
     margin: 0; }
-  .who-is-halcon__content {
+  .two-column-with-image__content {
     margin: 100px 0 0; }
-  .who-is-halcon__images {
+  .two-column-with-image__images {
     margin: 60px -15px 0;
     width: calc(100% + 30px); }
-  .why-work__headline {
-    margin: 95px 0 0; }
-  .why-work__items {
+  .two-column-with-image__items {
     display: block;
     margin: 90px 0 0; }
-  .why-work__item + .why-work__item {
+  .two-column-with-image__item + .two-column-with-image__item {
     margin-top: 30px; }
-  .why-work__button {
+  .two-column-with-image__button {
     margin: 50px 0 30px; }
-  .why-work__images {
-    margin: 0 -15px;
-    width: calc(100% + 30px); } }
+  .two-column-with-video {
+    margin: 75px 0 0; }
+  .two-column-with-video__anchor {
+    left: 0;
+    position: absolute;
+    top: -105px; }
+  .two-column-with-video__headline {
+    margin: 0; }
+  .two-column-with-video__content {
+    margin: 100px 0 0; }
+  .two-column-with-video__video {
+    margin: 50px 0 0; }
+  .two-column-with-video__button {
+    margin: 50px 0 30px; } }
+
+@media only screen and (max-width: 900px) {
+  .careers-popup-form {
+    margin: 0 0 0 -6px;
+    width: calc(100% + 12px) !important; } }
 
 @media only screen and (max-width: 767px) {
   .benefits__headline-wrapper {
@@ -1428,13 +1554,8 @@ html {
   .career-list-career--visible {
     max-height: 1000px;
     min-height: 335px; }
-  .career-list-career--hidden {
-    max-height: 0;
-    min-height: 0; }
-  .career-list-career:not(.career-list-career--visible):nth-child(n+5) {
-    max-height: 0;
-    min-height: 0; }
   .career-list-career:nth-child(3n - 1),
+  .career-list-career:nth-child(3n - 2),
   .career-list-career:nth-child(odd) {
     border-left: 0;
     border-right: 0; }
@@ -1446,10 +1567,12 @@ html {
     padding: 0 40px 0 0; }
   .career-list-career__text {
     padding: 0; }
-  .career-list__button {
-    display: flex; }
+  .careers-popup-form__job-title {
+    padding: 0 50px 0 0; }
   .careers-popup-form__close {
-    top: 45px !important; }
+    top: 24px !important; }
+  .careers-popup-form__close::after {
+    display: none; }
   .careers-popup-form__button {
     margin: 25px 0; }
   .careers-popup-form__radio {
@@ -1509,10 +1632,20 @@ html {
     height: 0;
     overflow: hidden;
     padding-bottom: 111%;
-    width: 100%; } }
+    width: 100%; }
+  .two-column-with-video__items {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    -ms-grid-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    margin: 50px 0 0; } }
 
 @media only screen and (max-width: 480px) {
   .benefits__items {
+    grid-column-gap: 0;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%; }
+  .two-column-with-video__items {
     grid-column-gap: 0;
     -ms-grid-columns: 100%;
     grid-template-columns: 100%; } }
@@ -1653,17 +1786,37 @@ input.datepicker_with_icon + img {
 
 /* Embedded Video =================================================== */
 .embedded-video {
-  position: relative;
-  padding-bottom: 56.25%;
   height: 0;
   max-width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative; }
   .embedded-video iframe {
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+    width: 100%; }
+
+/* Fade In Animation =================================================== */
+.faded-out-1 {
+  opacity: 0;
+  transform: translateY(30%);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.faded-out-2 {
+  opacity: 0;
+  transform: translateY(40%);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.faded-out-3 {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0); }
 
 /* Image Animation =================================================== */
 .image-sliding-animation {
@@ -1671,13 +1824,16 @@ input.datepicker_with_icon + img {
   height: 0;
   left: auto;
   transform: translate(0);
-  transition: all 1s cubic-bezier(0.25, 1, 0.25, 1); }
+  transition: all 1s cubic-bezier(0.25, 1, 0.25, 1) 0.5s; }
+
+.image-sliding-animation--slow {
+  transition-duration: 1.5s; }
 
 .image-sliding-animation--active {
   height: 100%; }
 
 .image-sliding-animation::after {
-  background: #FF5919;
+  background: #C5C5C5;
   content: '';
   height: 100%;
   left: 0;
@@ -1687,6 +1843,10 @@ input.datepicker_with_icon + img {
 
 .image-sliding-animation--active::after {
   animation: image-slide .35s ease .75s 1 forwards; }
+
+.image-sliding-animation--slow.image-sliding-animation--active::after {
+  animation-delay: 1s;
+  animation-duration: 1s; }
 
 /* Galleries =================================================== */
 .gallery {
@@ -1833,7 +1993,7 @@ select:-webkit-autofill:focus {
     margin: 30px 0 0 0; }
     .gform_wrapper .ginput_container_fileupload input[type="file"] {
       align-items: center;
-      background: #fff;
+      background: #f5f5f5;
       color: #000;
       cursor: pointer;
       display: flex;
@@ -1918,8 +2078,12 @@ select:-webkit-autofill:focus {
     padding: 0 50px;
     position: relative; }
   .gform_wrapper .gform_button::before {
-    background: #fff url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center left no-repeat;
+    background: url("assets/images/HF_CTA_Arrow_Btn_White.svg") center left no-repeat;
     transform: rotate(270deg); }
+  .gform_wrapper .gform_button:hover {
+    background: #000; }
+  .gform_wrapper .gform_button:hover::before {
+    background: url("assets/images/HF_CTA_Arrow_Btn_White_Black.svg") center left no-repeat; }
   .gform_wrapper .gform_ajax_spinner {
     display: none; }
   .gform_wrapper .validation_error {

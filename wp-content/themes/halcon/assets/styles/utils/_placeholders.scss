@@ -12,22 +12,24 @@
   align-items: center;
   color: #000;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-family: "GakSansBold", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+  min-height: 25px;
   text-decoration: none;
   text-transform: lowercase;
+  transition: all .2s ease-in-out;
 }
 
 %button::before {
-  background: #000 url('assets/images/HF_CTA_Arrow_Btn.svg') center center no-repeat;
-  border-radius: 12px;
+  background: url('assets/images/HF_CTA_Arrow_Btn_Black.svg') center center no-repeat;
   content: '';
   display: inline-block;
-  height: 24px;
+  height: 25px;
   margin: 0 15px 0 0;
-  width: 24px;
+  transition: all .2s ease-in-out;
+  width: 25px;
 }
 
 %clearfix::after {

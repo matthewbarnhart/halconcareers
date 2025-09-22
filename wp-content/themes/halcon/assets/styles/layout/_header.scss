@@ -55,16 +55,53 @@
   filter: invert(0);
 }
 
+.header__languages {
+  @extend %text-style;
+  color: #fff;
+  display: flex;
+  flex: 1 0 auto;
+  font-weight: 300;
+  justify-content: flex-end;
+  line-height: 1;
+  margin: 0 35px 0 0;
+  pointer-events: auto;
+}
+
+.header__languages--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header__language-link {
+  @extend %transition;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__language-link:hover {
+  color: $orange;
+}
+
+.header__language-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__language-link + .header__language-link {
+  margin-left: 15px;
+}
+
 .header__nav-trigger {
   align-items: center;
   cursor: pointer;
-  display: flex;
+  display: flex !important;
+  flex: 0 0 auto;
   height: 11px;
   justify-content: flex-end;
   padding: 0;
   pointer-events: auto;
   transition: all .5s $ease-out-circ;
-  width: 100%;
+  //width: 100%;
   z-index: map-get($zindex, header);
 }
 
@@ -106,22 +143,23 @@
 }
 
 /* Primary Nav =================================================== */
-  
+
+// shift everything to the right by 17px to hide the double scrollbar
 .primary-nav {
-  background: #fff;
+  background: #f3f3f3;
   height: 100vh;
   overflow: auto;
   padding: 50px 55px;
   position: absolute;
-  right: -450px;
+  right: -467px;
   top: 0;
   transition: all .5s $ease-out-circ;
-  width: 450px;
+  width: 467px;
   z-index: -1;
 }
 
 .primary-nav--visible {
-  right: 0;
+  right: -17px;
 }
 
 .primary-menu__item {
@@ -137,9 +175,14 @@
 }
 
 .primary-menu__link {
+  @extend %transition;
   color: inherit;
   text-decoration: none;
   z-index: mapget($zindex, page);
+}
+
+.primary-menu__link:hover {
+  color: $orange;
 }
 
 .primary-nav__address,
@@ -165,12 +208,23 @@
 }
 
 .primary-nav__link {
+  @extend %transition;
   color: $orange;
   text-decoration: none;
 }
 
+.primary-nav__link:hover {
+  color: #000;
+}
+
 
 @media only screen and (max-width: 990px) {	
+  
+  .header__languages {
+    left: 0;
+    position: absolute;
+    bottom: -5px;
+  }
   
   .header__nav-trigger,
   .header__nav-trigger--visible-nav {
@@ -192,6 +246,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .header__languages {
+    @include fontSize(16);
+    @include lineHeight(16);
+  }
   .primary-nav {
     padding: 75px 0 100px;
     right: 0;

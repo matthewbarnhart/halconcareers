@@ -144,7 +144,7 @@ select:-webkit-autofill:focus {
 		input[type="file"] {
 	    @extend %text-style-small;
       align-items: center;
-      background: #fff;
+      background: #f5f5f5;
       color: #000;
       cursor: pointer;
       display: flex;
@@ -254,8 +254,16 @@ select:-webkit-autofill:focus {
   }
 
   .gform_button::before {
-    background: #fff url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center left no-repeat;
+    background: url('assets/images/HF_CTA_Arrow_Btn_White.svg') center left no-repeat;
     transform: rotate(270deg);
+  }
+  
+  .gform_button:hover {
+    background: #000;
+  }
+  
+  .gform_button:hover::before {
+    background: url('assets/images/HF_CTA_Arrow_Btn_White_Black.svg') center left no-repeat;
   }
 	
   .gform_ajax_spinner {

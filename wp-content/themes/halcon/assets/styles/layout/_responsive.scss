@@ -42,19 +42,24 @@
   .career-list {
     grid-template-columns: 50% 50%;
   }
-  .career-list-career:nth-child(3n - 1) {
+  .career-list-career:nth-child(3n - 1),
+  .career-list-career:nth-child(3n - 2) {
     border-left: 0;
     border-right: 0;
   }
   .career-list-career:nth-child(odd) {
     border-right: 2px solid #DFDFDF;
   }
+  .hero__obj-fit-image {
+  	object-position: 70% 0;
+  }
+  .two-column-with-video__items {
+    grid-column-gap: 45px;
+    grid-template-columns: repeat(3, calc(33.333% - 30px));
+  }
 }
 
 @media only screen and (max-width: 990px) {
-  .careers {
-    margin: 0;
-  }
   .careers__anchor {
     left: 0;
     position: absolute;
@@ -72,7 +77,7 @@
   .hero {
     height: auto;
     // subtract the ios bottom nav
-    min-height: calc(100vh - 75px);
+    // min-height: calc(100vh - 75px);
   }
   .hero__headline-wrapper {
     align-items: flex-end;
@@ -87,7 +92,7 @@
   .hero__nav {
     display: none;
   }
-  .map-and-location__obj-fit-image-wrapper {
+  .map-and-location__image-wrapper {
     display: none;
   }
   .map-and-location__map {
@@ -103,50 +108,61 @@
   .testimonials {
     margin: 0;
   }
-  .who-is-halcon {
+  .two-column-with-image {
     margin: 75px 0 0;
-    .op-row {
-      display: flex;
-      flex-direction: column;
-    }
-    .op-col-start-1 {
-      order: 2;
-    }
-    .op-col-start-7 {
-      order: 1;
-    }
   }
-  .who-is-halcon__anchor {
+  .two-column-with-image__anchor {
     left: 0;
     position: absolute;
     top: -105px;
   }
-  .who-is-halcon__headline {
+  .two-column-with-image__headline {
     margin: 0;
   }
-  .who-is-halcon__content {
+  .two-column-with-image__content {
     margin: 100px 0 0;
   }
-  .who-is-halcon__images {
+ .two-column-with-image__images {
     margin: 60px -15px 0;
     width: calc(100% + 30px);
   }
-  .why-work__headline {
-    margin: 95px 0 0;
-  }
-  .why-work__items {
+  .two-column-with-image__items {
     display: block;
     margin: 90px 0 0;
   }
-  .why-work__item + .why-work__item {
+  .two-column-with-image__item + .two-column-with-image__item {
     margin-top: 30px;
   }
-  .why-work__button {
+  .two-column-with-image__button {
     margin: 50px 0 30px;
   }
-  .why-work__images {
-    margin: 0 -15px;
-    width: calc(100% + 30px);
+  
+  .two-column-with-video {
+    margin: 75px 0 0;
+  }
+  .two-column-with-video__anchor {
+    left: 0;
+    position: absolute;
+    top: -105px;
+  }
+  .two-column-with-video__headline {
+    margin: 0;
+  }
+  .two-column-with-video__content {
+    margin: 100px 0 0;
+  }
+ .two-column-with-video__video {
+    margin: 50px 0 0;
+  }
+  .two-column-with-video__button {
+    margin: 50px 0 30px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .careers-popup-form {  
+    margin: 0 0 0 -6px;
+    width: calc(100% + 12px) !important;
   }
 }
 
@@ -177,15 +193,8 @@
     max-height: 1000px;
     min-height: 335px;
   }
-  .career-list-career--hidden {
-    max-height: 0;
-    min-height: 0;
-  }
-  .career-list-career:not(.career-list-career--visible):nth-child(n+5) {
-    max-height: 0;
-    min-height: 0;
-  }
   .career-list-career:nth-child(3n - 1),
+  .career-list-career:nth-child(3n - 2),
   .career-list-career:nth-child(odd) {
     border-left: 0;
     border-right: 0;
@@ -203,10 +212,16 @@
     padding: 0;
   }
   .career-list__button {
-    display: flex;
+    //display: flex;
+  }
+  .careers-popup-form__job-title {
+    padding: 0 50px 0 0;
   }
   .careers-popup-form__close {
-    top: 45px !important;
+    top: 24px !important;
+  }
+  .careers-popup-form__close::after {
+    display: none;
   }
   .careers-popup-form__button {
     margin: 25px 0;
@@ -295,10 +310,20 @@
     padding-bottom: 111%;
     width: 100%;
   }
+  .two-column-with-video__items {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    margin: 50px 0 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .benefits__items {
+    grid-column-gap: 0;
+    grid-template-columns: 100%;
+  }
+  .two-column-with-video__items {
     grid-column-gap: 0;
     grid-template-columns: 100%;
   }

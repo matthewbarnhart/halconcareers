@@ -89,3 +89,7 @@ html {
 		color: $orange;
 	}
 }
+
+.swiper-container-free-mode>.swiper-wrapper{
+  transition-timing-function : linear;
+}

@@ -57,6 +57,14 @@
   transform: rotate(180deg);
 }
 
+.benefits__button:hover {
+  color: $orange;
+}
+
+.benefits__button:hover::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center center no-repeat;
+}
+
 /* Careers Opportunities =================================================== */
 
 .hero + .careers {
@@ -127,8 +135,8 @@
   max-height: 0;
 }
 
-.career-list-career:nth-child(3n - 1) {
-  border-left: 2px solid #DFDFDF;
+.career-list-career:nth-child(3n - 1),
+.career-list-career:nth-child(3n - 2) {
   border-right: 2px solid #DFDFDF;
 }
 
@@ -166,6 +174,10 @@
 
   .career-list-career__link {
     color: #fff;
+  }
+  
+  .career-list-career__link:hover {
+    color: $orange;
   }
 }
 
@@ -270,6 +282,9 @@
 /* Careers Form =================================================== */
 
 .careers-popup-form {  
+  background: #f5f5f5;
+  margin: 0 0 0 -8px;
+  width: calc(100% + 16px) !important;
   .op-row {
     align-items: center;
     min-height: 100vh;
@@ -283,66 +298,40 @@
 
 .careers-popup-form__job-title {
   @extend %headline2;
-  padding: 0 50px 0 0;
+  padding: 0 250px 0 0;
 }
 
 .careers-popup-form__close {
-  cursor: pointer;
-  display: inline-block;
-  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  @extend %button;
+  color: #fff;
+  margin: 15px 0 0;
   position: absolute;
   right: 0;
-  top: 85px !important;
-  width: $hamburger-layer-width;
+  top: 68px !important;
 }
 
-.careers-popup-form__close-inner {
-  display: block;
-  top: 50%;
-  margin-top: $hamburger-layer-height / -2;
-  transform: rotate(45deg);
-  
-  &,
-  &::before,
-  &::after {
-    width: $hamburger-layer-width;
-    height: $hamburger-layer-height;
-    background-color: #000;
-    border-radius: $hamburger-layer-border-radius;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-  }
-
-  &::before {
-    top: 0;
-    opacity: 0;
-  }
-
-  &::after {
-    bottom: 0;
-    transform: rotate(-90deg);
-  }
+.careers-popup-form__close::after {
+  @extend %transition;
+  color: $orange;
+  content: 'Back to the opportunities';
+  text-transform: none;
 }
 
-.careers-popup-form__button {
-  @extend %button;
-  margin: 40px 0 0;
+.careers-popup-form__close::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center left no-repeat;
+  transform: rotate(270deg);
 }
 
-.careers-popup-form__button::before {
-  background: #000 url('assets/images/HF_CTA_Plus_Btn.svg') center center no-repeat;
-  background-size: 11px 11px;
-  border-radius: 12px;
-  height: 24px;
-  width: 24px;  
+.careers-popup-form__close:hover {
+  color: #000;
+}
+
+.careers-popup-form__close:hover::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Black.svg') center left no-repeat;
+}
+
+.careers-popup-form__close:hover::after {
+  color: #000;
 }
 
 .careers-popup-form__radio {
@@ -381,6 +370,8 @@
 }
 
 .careers-popup-form__button {
+  @extend %button;
+  margin: 40px 0 0;
 	max-height: 40px;
 	transition: all .2s ease-in-out;
 }
@@ -389,6 +380,24 @@
 	max-height: 0;
 	overflow: hidden;
 }
+
+.careers-popup-form__button::before {
+  background: #000 url('assets/images/HF_CTA_Plus_Btn.svg') center center no-repeat;
+  background-size: 11px 11px;
+  border-radius: 12px;
+  height: 24px;
+  width: 24px;
+}
+
+.careers-popup-form__button:hover {
+  color: $orange;
+}
+
+.careers-popup-form__button:hover::before {
+  background-color: $orange;
+}
+
+
 
 .careers-popup-form__past-employment {
 	@extend %transition;
@@ -406,6 +415,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+	min-height: 100svh;
   position: relative;
   z-index: map-get($zindex, page);
 }
@@ -465,21 +475,37 @@
 }
 
 .hero-menu__item + .hero-menu__item {
-  margin-left: 40px;
+  margin-left: 30px;
   padding-left: 40px;
   position: relative;
 }
 
 .hero-menu__item + .hero-menu__item::before {
   content: '|';
-  left: -8px;
+  left: -2px;
   position: absolute;
   top: 0;
 }
 
 .hero-menu__link {
+  @extend %transition;
   color: inherit;
   text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.hero-menu__link:hover {
+	  color: $orange;
+	}
+}
+
+@media (pointer: coarse) {
+	.hero-menu__link {
+		transition: none;
+	}
+	.hero-menu__link:active {
+	  color: $orange;
+	}
 }
 
 /* Map & Location =================================================== */
@@ -497,10 +523,9 @@
 
 .map-and-location__headline {
   @extend %headline2;
-}
-
-.map-and-location__headline {
-  @extend %headline2;
+  align-items: center;
+  display: flex;
+  height: 100%;
 }
 
 .map-and-location__text {
@@ -517,8 +542,13 @@
 }
 
 .map-and-location__link {
+  @extend %transition;
   color: $orange;
   text-decoration: none;
+}
+
+.map-and-location__link:hover {
+  color: #000;
 }
 
 .map-and-location__image-wrapper {
@@ -595,8 +625,16 @@
 }
 
 .ribbon__button::before {
-  background: #fff url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center left no-repeat;
+  background: url('assets/images/HF_CTA_Arrow_Btn_White.svg') center left no-repeat;
   transform: rotate(270deg);
+}
+
+.ribbon__button:hover {
+  color: #000;
+}
+
+.ribbon__button:hover::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Black.svg') center left no-repeat;
 }
 
 /* Slideshow =================================================== */
@@ -708,9 +746,10 @@
 }
 
 .testimonial__images {
+  left: 50%;
   position: relative;
-  margin: 0 0 0 -175px;
-  width: 1950px;
+  transform: translateX(-50%);
+  width: 1990px;
   
   .swiper-wrapper {
     padding: 50px 0 0;
@@ -736,72 +775,27 @@
   @extend %object-fit;
 }
 
-/* Who is HALCON =================================================== */
+/* Two Column with Image =================================================== */
 
-.who-is-halcon {
-  margin: 100px 0 0;
-  position: relative;
-}
-
-.who-is-halcon__anchor {
-  left: 0;
-  position: absolute;
-  top: -55px;
-}
-
-.who-is-halcon__headline {
-  @extend %headline2;
-  color: #3D3D3C;
-  margin: 100px 0 0;
-}
-
-.who-is-halcon__content {
-  margin: 180px 0 0;
-}
-
-.who-is-halcon__images {
-  height: 0;
-  overflow: hidden;
-  padding-bottom: 133%;
-  position: relative;
-  width: 100%;
-  
-  .swiper-container {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-
-.who-is-halcon__obj-fit-image-wrapper {
-	@extend %background-image;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-}
-
-.who-is-halcon__obj-fit-image {
-  @extend %object-fit;
-}
-
-/* Why Work With Us =================================================== */
-
-.why-work {
+.two-column-with-image {
   margin: 50px 0 0;
 }
 
-.why-work__headline {
+.two-column-with-image__headline {
   @extend %headline2;
   color: #3D3D3C;
   margin: 80px 0 0;
 }
 
-.why-work__items {
+.two-column-with-image__content {
+  margin: 180px 0 0;
+}
+
+.two-column-with-image__content + .two-column-with-image__items {
+  margin: 80px 0 0;
+}
+
+.two-column-with-image__items {
   display: grid;
   grid-column-gap: 45px;
   grid-row-gap: 55px;
@@ -810,30 +804,39 @@
   margin: 175px 0 0;
 }
 
-.why-work__item {
+.two-column-with-image__item {
   grid-column: auto / auto;
 }
 
-.why-work__subhead {
+.two-column-with-image__subhead {
   @extend %headline4;
   color: #000;
 }
 
-.why-work__text {
+.two-column-with-image__text {
   @extend %text-style;
   color: $med-gray;
   margin: getMargin(16, .5) 0 0;
 }
 
-.why-work__button {
+.two-column-with-image__button {
   @extend %button;
+  display: inline-flex;
   margin: 110px 0 60px;
 }
 
-.why-work__images {
+.two-column-with-image__button:hover {
+  color: $orange;
+}
+
+.two-column-with-image__button:hover::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center center no-repeat;
+}
+
+.two-column-with-image__images {
   height: 0;
   overflow: hidden;
-  padding-bottom: 133%;
+  padding-bottom: 106.66%;
   position: relative;
   width: 100%;
   
@@ -846,7 +849,7 @@
   }
 }
 
-.why-work__obj-fit-image-wrapper {
+.two-column-with-image__obj-fit-image-wrapper {
 	@extend %background-image;
   bottom: 0;
   height: 100%;
@@ -856,6 +859,70 @@
   width: 100%;
 }
 
-.why-work__obj-fit-image {
+.two-column-with-image__obj-fit-image {
   @extend %object-fit;
 }
+
+/* Two Column with Video =================================================== */
+
+.two-column-with-video {
+  margin: 50px 0 0;
+}
+
+.two-column-with-video__headline {
+  @extend %headline2;
+  color: #3D3D3C;
+  margin: 80px 0 0;
+}
+
+.two-column-with-video__content {
+  margin: 75px 0 0;
+}
+
+.two-column-with-video__content + .two-column-with-video__items {
+  margin: 75px 0 0;
+}
+
+.two-column-with-video__items {
+  display: grid;
+  grid-column-gap: 240px;
+  grid-row-gap: 60px;
+  grid-template-columns: repeat(3, calc(33.333% - 160px));
+  grid-template-rows: auto;
+  margin: 75px 0 0;
+}
+
+.two-column-with-video__item {
+  grid-column: auto / auto;
+}
+
+.two-column-with-video__subhead {
+  @extend %headline4;
+  color: #000;
+}
+
+.two-column-with-video__text {
+  @extend %text-style;
+  color: $med-gray;
+  margin: getMargin(16, .5) 0 0;
+}
+
+.two-column-with-video__button {
+  @extend %button;
+  display: inline-flex;
+  margin: 110px 0 60px;
+}
+
+.two-column-with-video__button:hover {
+  color: $orange;
+}
+
+.two-column-with-video__button:hover::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center center no-repeat;
+}
+
+.two-column-with-video__video {
+  margin: 75px 0 0;
+  position: relative;
+}
+

@@ -24,8 +24,13 @@
 }
 
 .footer-menu__link {
+  @extend %transition;
   color: inherit;
   text-decoration: none;
+}
+
+.footer-menu__link:hover {
+  color: $orange;
 }
 
 .footer__utility {
@@ -46,11 +51,16 @@
 	background: #000;
 	border-radius: 12px;
 	color: #fff;
+  cursor: pointer;
 	display: flex;
 	height: 24px;
 	justify-content: center;
 	list-style: none;
 	width: 24px;
+}
+
+.social-media__item:hover {
+	background: $orange;
 }
 
 .social-media__item + .social-media__item {
@@ -70,13 +80,17 @@
 /* Back to Top =================================================== */
 
 .footer__back-to-top {
-  background: #000 url('assets/images/HF_CTA_Arrow_Btn.svg') center center no-repeat;
-  border-radius: 12px;
+  @extend %transition;
+  background: url('assets/images/HF_CTA_Arrow_Btn_Black.svg') center center no-repeat;
   display: inline-block;
-  height: 24px;
+  height: 25px;
   margin: 0 0 0 30px;
   transform: rotate(180deg);
   width: 24px;
+}
+
+.footer__back-to-top:hover {
+  background: url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center center no-repeat;
 }
 
 @media only screen and (max-width: 990px) {
