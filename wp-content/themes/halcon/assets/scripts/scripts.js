@@ -24,21 +24,6 @@ $( window ).on('load resize', function() {
   //debounce(formatCareers())
 });
 
-// function hasScrolled() {
-//   let st = $(window).scrollTop();
-//   let ribbon_height = $('.ribbon-wrapper').height();
-//   $('.ribbon-wrapper').css('maxHeight', `${ribbon_height}px`).css('opacity', 1);
-//   let hero_top_padding = ribbon_height + 75;
-//   $('.hero__headline-wrapper').css('paddingTop', `${hero_top_padding}px` )
-//   if (st > 0){
-//     $('.ribbon-wrapper').addClass('ribbon-wrapper--hidden')
-//     //$('.hero__headline-wrapper').css('paddingTop', `75px` )
-//     $('.header').addClass('header--sticky');
-//   } else if(st <= 0) {
-//     $('.header').removeClass('header--sticky');
-//   }
-// }
-
 const careers_button = document.querySelector('.career-list__button')
 
 if( careers_button ) {
