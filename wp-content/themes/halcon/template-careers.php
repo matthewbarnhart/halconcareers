@@ -22,4 +22,4 @@ get_header('careers'); ?>
 	}
 ?>
 </main>
-<?php get_footer(); ?>
+<?php get_footer('careers'); ?>

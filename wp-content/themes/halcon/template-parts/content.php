@@ -18,6 +18,12 @@ if( function_exists('have_rows') && have_rows('flexible_content_1') ):
 
       endif;
 			
+      if( get_row_layout() == 'careers_banner' ):
+
+        get_template_part( 'template-parts/content','careers-banner');
+
+      endif;
+			
       if( get_row_layout() == 'careers_hero' ):
 
         get_template_part( 'template-parts/content','careers-hero');

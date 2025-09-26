@@ -26,7 +26,7 @@ echo '<div class="hero">';
       echo '</div>'; 
     echo '</div>'; 
   }
-  echo '<nav class="hero__nav">';
+  echo '<nav class="hero__nav hero__nav--careers">';
     echo '<div class="op-row">';
       echo '<div class="op-col-start-1 op-col-end-12">';
         bem_menu('careers', 'hero-menu'); 

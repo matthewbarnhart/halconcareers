@@ -65,9 +65,59 @@
   background: url('assets/images/HF_CTA_Arrow_Btn_Orange.svg') center center no-repeat;
 }
 
+/* Careers Banner =================================================== */
+
+.careers-banner-wrapper {
+  @extend %transition;
+  background: $orange;
+	//border-bottom: 1px solid $med-gray;
+  position: relative;
+  width: 100%;
+  
+  .op-row {
+    pointer-events: auto;
+  }
+}
+
+.careers-banner__anchor {
+  left: 0;
+  position: absolute;
+  top: -57px;
+}
+
+.careers-banner {
+  align-items: center;
+	column-gap: 30px;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  padding: 15px 0 30px;
+  width: 100%;
+}
+
+.careers-banner__text {
+  @extend %headline3;
+  color: #fff;
+	flex: 0 1 auto;
+  margin: 15px 0 0;
+}
+
+.careers-banner__button {
+  @extend %button;
+  color: #fff;
+	flex: 0 0 auto;
+  margin: 15px 0 0;
+}
+
+.careers-banner__button::before {
+  background: url('assets/images/HF_CTA_Arrow_Btn_White.svg') center left no-repeat;
+  transform: rotate(270deg);
+}
+
 /* Careers Opportunities =================================================== */
 
-.hero + .careers {
+.hero + .careers,
+.careers-banner-wrapper + .careers {
 	margin-top: 0;
 }
 
@@ -457,6 +507,13 @@
   flex: 0 0 100px;
   width: 100%;
   z-index: map-get($zindex, page);
+}
+
+.hero__nav--careers {
+	.hero-menu__item {
+	  @include fontSize(32);
+	  @include lineHeight(32);
+	}
 }
 
 .hero-menu {

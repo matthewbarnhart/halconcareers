@@ -32,7 +32,7 @@ Author URI: thisismalley.com
   background-size: cover; }
 
 .op-article .btn,
-.op-content-block .btn, .benefits__button, .career-list__button, .careers-popup-form__close, .careers-popup-form__button, .ribbon__button, .two-column-with-image__button, .two-column-with-video__button, .post-password-form input[type=submit], .gform_wrapper .gform_button {
+.op-content-block .btn, .benefits__button, .careers-banner__button, .career-list__button, .careers-popup-form__close, .careers-popup-form__button, .ribbon__button, .two-column-with-image__button, .two-column-with-video__button, .post-password-form input[type=submit], .gform_wrapper .gform_button {
   font-size: 1.16667rem;
   line-height: 1.71429em;
   align-items: center;
@@ -48,7 +48,7 @@ Author URI: thisismalley.com
   transition: all .2s ease-in-out; }
 
 .op-article .btn::before,
-.op-content-block .btn::before, .benefits__button::before, .career-list__button::before, .careers-popup-form__close::before, .careers-popup-form__button::before, .ribbon__button::before, .two-column-with-image__button::before, .two-column-with-video__button::before, .post-password-form input[type=submit]::before, .gform_wrapper .gform_button::before {
+.op-content-block .btn::before, .benefits__button::before, .careers-banner__button::before, .career-list__button::before, .careers-popup-form__close::before, .careers-popup-form__button::before, .ribbon__button::before, .two-column-with-image__button::before, .two-column-with-video__button::before, .post-password-form input[type=submit]::before, .gform_wrapper .gform_button::before {
   background: url("assets/images/HF_CTA_Arrow_Btn_Black.svg") center center no-repeat;
   content: '';
   display: inline-block;
@@ -81,7 +81,7 @@ Author URI: thisismalley.com
   font-weight: 400; }
 
 .op-article h3,
-.op-content-block h3, .career-list-career__title, .careers-popup-form__file-upload .gfield_label, .ribbon__text, .gform_wrapper .gsection_title {
+.op-content-block h3, .careers-banner__text, .career-list-career__title, .careers-popup-form__file-upload .gfield_label, .ribbon__text, .gform_wrapper .gsection_title {
   font-size: 2.16667rem;
   line-height: 1.38462em;
   color: #3D3D3C;
@@ -126,7 +126,7 @@ Author URI: thisismalley.com
   color: #3D3D3C;
   font-weight: 400; }
 
-.header-logo__image, .header__language-link, .primary-menu__link, .primary-nav__link, .footer-menu__link, .social-media__item, .social-media__link, .social-media__link::before, .footer__back-to-top, .career-list-career__title::before, .career-list-career__link, .careers-popup-form__close::after, .careers-popup-form__past-employment, .hero-menu__link, .map-and-location__link, .ribbon-wrapper, .testimonials-pagination__bullet, .testimonial__images .swiper-slide, .wp-pagenavi .previouspostslink,
+.header-logo__image, .header__language-link, .primary-menu__link, .primary-nav__link, .footer-menu__link, .social-media__item, .social-media__link, .social-media__link::before, .footer__back-to-top, .careers-banner-wrapper, .career-list-career__title::before, .career-list-career__link, .careers-popup-form__close::after, .careers-popup-form__past-employment, .hero-menu__link, .map-and-location__link, .ribbon-wrapper, .testimonials-pagination__bullet, .testimonial__images .swiper-slide, .wp-pagenavi .previouspostslink,
 .wp-pagenavi .nextpostslink, .wp-pagenavi .page {
   transition: all .2s ease-in-out; }
 
@@ -140,7 +140,7 @@ Author URI: thisismalley.com
     font-size: 2.33333rem;
     line-height: 1.11429em; }
   .op-article h3,
-  .op-content-block h3, .career-list-career__title, .careers-popup-form__file-upload .gfield_label, .ribbon__text, .gform_wrapper .gsection_title {
+  .op-content-block h3, .careers-banner__text, .career-list-career__title, .careers-popup-form__file-upload .gfield_label, .ribbon__text, .gform_wrapper .gsection_title {
     font-size: 1.66667rem;
     line-height: 1.32em; }
   .op-article h4,
@@ -770,8 +770,45 @@ html {
 .benefits__button:hover::before {
   background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center center no-repeat; }
 
+/* Careers Banner =================================================== */
+.careers-banner-wrapper {
+  background: #FF5919;
+  position: relative;
+  width: 100%; }
+  .careers-banner-wrapper .op-row {
+    pointer-events: auto; }
+
+.careers-banner__anchor {
+  left: 0;
+  position: absolute;
+  top: -57px; }
+
+.careers-banner {
+  align-items: center;
+  column-gap: 30px;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  padding: 15px 0 30px;
+  width: 100%; }
+
+.careers-banner__text {
+  color: #fff;
+  flex: 0 1 auto;
+  margin: 15px 0 0; }
+
+.careers-banner__button {
+  color: #fff;
+  flex: 0 0 auto;
+  margin: 15px 0 0; }
+
+.careers-banner__button::before {
+  background: url("assets/images/HF_CTA_Arrow_Btn_White.svg") center left no-repeat;
+  transform: rotate(270deg); }
+
 /* Careers Opportunities =================================================== */
-.hero + .careers {
+.hero + .careers,
+.careers-banner-wrapper + .careers {
   margin-top: 0; }
 
 .careers {
@@ -1067,6 +1104,10 @@ html {
   flex: 0 0 100px;
   width: 100%;
   z-index: 5000; }
+
+.hero__nav--careers .hero-menu__item {
+  font-size: 2.66667rem;
+  line-height: 0.75em; }
 
 .hero-menu {
   text-align: center; }
@@ -1801,17 +1842,17 @@ input.datepicker_with_icon + img {
 .faded-out-1 {
   opacity: 0;
   transform: translateY(30%);
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s; }
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .faded-out-2 {
   opacity: 0;
   transform: translateY(40%);
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s; }
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .faded-out-3 {
   opacity: 0;
   transform: translateY(50%);
-  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s; }
+  transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
 .fade-in {
   opacity: 1;
