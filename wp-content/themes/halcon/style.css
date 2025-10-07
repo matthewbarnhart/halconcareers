@@ -1378,6 +1378,9 @@ html {
 .two-column-with-image__button:hover {
   color: #FF5919; }
 
+.two-column-with-image__button::before {
+  transform: rotate(270deg); }
+
 .two-column-with-image__button:hover::before {
   background: url("assets/images/HF_CTA_Arrow_Btn_Orange.svg") center center no-repeat; }
 
